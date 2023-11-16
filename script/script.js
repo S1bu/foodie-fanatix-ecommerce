@@ -44,7 +44,7 @@ const meals = [
 
 ]
 
-const desert = [
+const deserts = [
     {
         id:1,
         product:"Pumpkin Cookie Dough Ice-Cream",
@@ -171,7 +171,7 @@ const drinks = [
     },
 ]
 
-const starts =[
+const starters =[
     {
         id:1,
         product:"Mini pizza",
@@ -240,9 +240,18 @@ const special = [
     },
     
 ]
+// DOM for display
+let specials_display = document.querySelector('.specials');
+let meals_display = document.querySelector('.display_products');
 
-let specials_display = document.querySelector('.specials')
 
+//DOM CLICKED
+let meal = document.querySelector('.meals')
+let drink = document.querySelector('.drinks')
+let desert = document.querySelector('.deserts')
+let starter = document.querySelector('.starters')
+
+// DISPLAY
 special.forEach(special => {
     specials_display.innerHTML+=`
     
@@ -270,3 +279,167 @@ special.forEach(special => {
     </div>
 </div>
     `});
+//toggle
+let mealz = 0
+let drinkz = 0
+let desertz = 0
+let starterz = 0
+
+// functions
+function showmeal(){
+    mealz += 1
+    drinkz = 0
+    desertz = 0
+    starterz = 0
+
+if( mealz == 1){
+    meals.forEach(meal => {
+        meals_display.innerHTML+=`
+        <div class="card" style="border:1px solid white;">       
+        <div class="image-holder">
+            <img src="${meal.Image}" alt="">
+        </div>
+        <div class="details">
+            <div class="row">
+                <div class="col">
+                   <strong><p>${meal.product}</p></strong>
+                </div>
+                <div class="col price">
+                        <p>$${meal.price}</p>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                 impedit placeat ipsum, architecto ipsam iusto praesentium eaque
+            </p>
+            <div class="cart-button">
+            <i class="bi bi-bag"></i>
+            </div>
+        </div>
+    </div>
+        `});
+}else{
+    mealz = 0
+}
+console.log(toggle)
+
+}
+function showdesert(){
+    mealz = 0
+    drinkz = 0
+    desertz += 1
+    starterz = 0
+
+    if( desertz == 2){
+    deserts.forEach(desert => {
+            meals_display.innerHTML+=`
+            <div class="card" style="border:1px solid white;">       
+            <div class="image-holder">
+                <img src="${desert.Image}" alt="">
+            </div>
+            <div class="details">
+                <div class="row">
+                    <div class="col">
+                       <strong><p>${desert.product}</p></strong>
+                    </div>
+                    <div class="col price">
+                            <p>$${desert.price}</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                     impedit placeat ipsum, architecto ipsam iusto praesentium eaque
+                </p>
+                <div class="cart-button">
+                <i class="bi bi-bag"></i>
+                </div>
+            </div>
+        </div>
+            `});   
+    }else{
+        desertz = 0
+    }
+    console.log(toggle)
+}
+function showdrink(){
+    mealz = 0
+    drinkz += 1
+    desertz = 0
+    starterz = 0
+
+    if( drinkz == 1){
+    drinks.forEach(drink => {
+            meals_display.innerHTML+=`
+            <div class="card" style="border:1px solid white;">       
+            <div class="image-holder">
+                <img src="${drink.Image}" alt="">
+            </div>
+            <div class="details">
+                <div class="row">
+                    <div class="col">
+                       <strong><p>${drink.product}</p></strong>
+                    </div>
+                    <div class="col price">
+                            <p>$${drink.price}</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                     impedit placeat ipsum, architecto ipsam iusto praesentium eaque
+                </p>
+                <div class="cart-button">
+                <i class="bi bi-bag"></i>
+                </div>
+            </div>
+        </div>
+            `}); 
+    }  
+            else{
+                drinkz = 0
+            }
+            console.log(toggle)
+}
+function showstarter(){
+    mealz = 0
+    drinkz = 0
+    desertz = 0
+    starterz = 1
+
+    if( starterz == 1){
+    starters.forEach(starter => {
+            meals_display.innerHTML+=`
+            <div class="card" style="border:1px solid white;">       
+            <div class="image-holder">
+                <img src="${starter.Image}" alt="">
+            </div>
+            <div class="details">
+                <div class="row">
+                    <div class="col">
+                       <strong><p>${starter.product}</p></strong>
+                    </div>
+                    <div class="col price">
+                            <p>$${starter.price}</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                     impedit placeat ipsum, architecto ipsam iusto praesentium eaque
+                </p>
+                <div class="cart-button">
+                <i class="bi bi-bag"></i>
+                </div>
+            </div>
+        </div>
+            `});   
+ 
+        }  
+        else{
+            starterz = 0
+        }
+        //   console.log()
+}
+
+
+
+
+// Event listeners
+meal.addEventListener("click", showmeal);
+drink.addEventListener("click",showdrink)
+desert.addEventListener("click",showdesert)
+starter.addEventListener("click",showstarter)

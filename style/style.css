@@ -46,6 +46,7 @@ box-shadow: 1px 1px 20px white inset;
 
 /* ----------------------------- */
 .specials{
+ 
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-around;
@@ -86,3 +87,24 @@ margin: 10px;
     border-radius: 50%;
     color: white;
 }
+ 
+ .display_products{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+ }
+
+
+ .menu_nav{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+ }
+
+ .menu_nav button{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid white;
+ }

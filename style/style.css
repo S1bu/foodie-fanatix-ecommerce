@@ -1,5 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Josefin Slab'
+}
+.nav-item{
+    margin:0 20px;
+    color: black;
+    font-weight: 500;
+}
+.container{
+    margin-top: 5%;
+}
+.col{
+    /* border: #F20000 solid 1px; */
+    margin: 5px;
+}
+.col img{
+width: 270px;
+box-shadow: 1px 1px 20px white inset;
+/* border: #F20000 solid 1px; */
+}
+.info h3{
+    margin-left: 10%;
+}
+.info p{
+    margin-left: 10%;
+}
+ 
+.info a{
+    margin-left: 10%;
+    padding: 20px 70px;
+    background-color: #F20000;
+    width: 400px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 50px;
+}
+
+/* ----------------------------- */
+.specials{
+ 
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+.card{
+    width: 300px;
+}
+/* .card:hover{
+    border: 1px solid black;
+} */
+.cart-button{
+    text-align: right;
+    margin-right: 10px;
+   
+}
+.image-holder{
+    text-align: center;
+    width: 100%;
+}
+.image-holder img{
+    width: 270px;
+    height:300px;
+    object-fit: contain;
+    /* border-radius: 30px; */
+    margin-bottom: 5px;
+}
+.price{
+    text-align: right;
+}
+.details p{
+font-size: 10px;
+margin: 10px;
+}
+.cart-button i{
+    font-weight: 400;
+    background-color: #F20000;
+    padding:5px 10px;
+    border-radius: 50%;
+    color: white;
+}
+ 
+ .display_products{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+ }
+
+
+ .menu_nav{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+ }
+
+ .menu_nav button{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid white;
+ }

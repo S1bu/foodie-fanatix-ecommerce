@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Josefin Slab'
+    font-family:cursive;
 }
 .nav-item{
     margin:0 20px;
@@ -18,13 +18,13 @@ body{
     margin-top: 5%;
 }
 .col{
-    /* border: #F20000 solid 1px; */
     margin: 5px;
 }
 .col img{
 width: 270px;
 box-shadow: 1px 1px 20px white inset;
-/* border: #F20000 solid 1px; */
+background:transparent;
+border: none;
 }
 .info h3{
     margin-left: 10%;
@@ -43,6 +43,11 @@ box-shadow: 1px 1px 20px white inset;
     font-weight: 900;
     border-radius: 50px;
 }
+.bg{
+    background-image: url('https://i.postimg.cc/cJKzvcDN/sliced-vegetables-realistic-concept-with-tomato-pepper-onion-vector-illustration-1284-16245.jpg');
+    background-size: cover;
+    height: 80vh;
+}
 
 /* ----------------------------- */
 .specials{
@@ -53,10 +58,9 @@ box-shadow: 1px 1px 20px white inset;
 }
 .card{
     width: 300px;
+    margin: 20px;
 }
-/* .card:hover{
-    border: 1px solid black;
-} */
+ 
 .cart-button{
     text-align: right;
     margin-right: 10px;
@@ -69,8 +73,8 @@ box-shadow: 1px 1px 20px white inset;
 .image-holder img{
     width: 270px;
     height:300px;
-    object-fit: contain;
-    /* border-radius: 30px; */
+    object-fit: cover;
+    border-radius: 30px;
     margin-bottom: 5px;
 }
 .price{
@@ -88,12 +92,6 @@ margin: 10px;
     color: white;
 }
  
- .display_products{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
- }
-
 
  .menu_nav{
     display:grid;
@@ -108,3 +106,25 @@ margin: 10px;
     background-color: white;
     border: 1px solid white;
  }
+
+
+#starters{
+ display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+#drinks{
+ display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+#meals{
+ display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+#deserts{
+ display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}

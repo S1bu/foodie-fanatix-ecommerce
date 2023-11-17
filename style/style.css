@@ -9,6 +9,14 @@
 body{
     font-family:cursive;
 }
+nav{
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    background-color: white;
+    z-index: 1;
+
+}
 .nav-item{
     margin:0 20px;
     color: black;
@@ -64,7 +72,8 @@ border: none;
 .cart-button{
     text-align: right;
     margin-right: 10px;
-   
+   border: none;
+   background-color:none;
 }
 .image-holder{
     text-align: center;
@@ -127,4 +136,11 @@ margin: 10px;
  display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-around;
+}
+
+.count{
+    background-color: #F20000;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 8px;
 }

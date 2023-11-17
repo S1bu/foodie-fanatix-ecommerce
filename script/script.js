@@ -169,6 +169,14 @@ const drinks = [
         price:"21",
         category:"drinks"
     },
+    {
+        id:9,
+        product:"Perfect Vanilla Bean Iced Coffee",
+        Image:" https://i.postimg.cc/BnwZF40P/5b06de2d0c0da5b8d48f990821cf24aa.jpg",
+        price:"21",
+        category:"drinks"
+    },
+   
 ]
 
 const starters =[
@@ -207,6 +215,14 @@ const starters =[
         price:"21",
         category:"starters"
     },
+    {
+        id:6,
+        product:"Chipotle Chicken Nachos with Jalapeño Yogurt",
+        Image:"https://i.postimg.cc/9QzRKxXT/c5a2e8b95258635d16987246ef46f755.jpg",
+        price:"21",
+        category:"starters"
+    },
+    
 ]
 
 const special = [
@@ -242,16 +258,17 @@ const special = [
 ]
 // DOM for display
 let specials_display = document.querySelector('.specials');
-let meals_display = document.querySelector('.display_products');
+
 
 
 //DOM CLICKED
-let meal = document.querySelector('.meals')
-let drink = document.querySelector('.drinks')
-let desert = document.querySelector('.deserts')
-let starter = document.querySelector('.starters')
+let meal_display = document.querySelector('#meals')
+let drink_display = document.querySelector('#drinks')
+let desert_display = document.querySelector('#deserts')
+let starter_display = document.querySelector('#starters')
 
-// DISPLAY
+//---- DISPLAYs------
+// specials
 special.forEach(special => {
     specials_display.innerHTML+=`
     
@@ -279,22 +296,9 @@ special.forEach(special => {
     </div>
 </div>
     `});
-//toggle
-let mealz = 0
-let drinkz = 0
-let desertz = 0
-let starterz = 0
-
-// functions
-function showmeal(){
-    mealz += 1
-    drinkz = 0
-    desertz = 0
-    starterz = 0
-
-if( mealz == 1){
+//  meals
     meals.forEach(meal => {
-        meals_display.innerHTML+=`
+        meal_display.innerHTML+=`
         <div class="card" style="border:1px solid white;">       
         <div class="image-holder">
             <img src="${meal.Image}" alt="">
@@ -317,21 +321,10 @@ if( mealz == 1){
         </div>
     </div>
         `});
-}else{
-    mealz = 0
-}
-console.log(toggle)
-
-}
-function showdesert(){
-    mealz = 0
-    drinkz = 0
-    desertz += 1
-    starterz = 0
-
-    if( desertz == 2){
+ 
+// deserts
     deserts.forEach(desert => {
-            meals_display.innerHTML+=`
+            desert_display.innerHTML+=`
             <div class="card" style="border:1px solid white;">       
             <div class="image-holder">
                 <img src="${desert.Image}" alt="">
@@ -354,20 +347,10 @@ function showdesert(){
             </div>
         </div>
             `});   
-    }else{
-        desertz = 0
-    }
-    console.log(toggle)
-}
-function showdrink(){
-    mealz = 0
-    drinkz += 1
-    desertz = 0
-    starterz = 0
-
-    if( drinkz == 1){
+ 
+//drinks
     drinks.forEach(drink => {
-            meals_display.innerHTML+=`
+            drink_display.innerHTML+=`
             <div class="card" style="border:1px solid white;">       
             <div class="image-holder">
                 <img src="${drink.Image}" alt="">
@@ -390,21 +373,12 @@ function showdrink(){
             </div>
         </div>
             `}); 
-    }  
-            else{
-                drinkz = 0
-            }
-            console.log(toggle)
-}
-function showstarter(){
-    mealz = 0
-    drinkz = 0
-    desertz = 0
-    starterz = 1
+ 
+//starters
 
-    if( starterz == 1){
     starters.forEach(starter => {
-            meals_display.innerHTML+=`
+            starter_display.innerHTML+=`
+
             <div class="card" style="border:1px solid white;">       
             <div class="image-holder">
                 <img src="${starter.Image}" alt="">
@@ -428,18 +402,11 @@ function showstarter(){
         </div>
             `});   
  
-        }  
-        else{
-            starterz = 0
-        }
-        //   console.log()
-}
-
 
 
 
 // Event listeners
-meal.addEventListener("click", showmeal);
-drink.addEventListener("click",showdrink)
-desert.addEventListener("click",showdesert)
-starter.addEventListener("click",showstarter)
+// meal.addEventListener("click", showmeal);
+// drink.addEventListener("click",showdrink)
+// desert.addEventListener("click",showdesert)
+// starter.addEventListener("click",showstarter)

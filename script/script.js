@@ -1,21 +1,4 @@
 const meals = [
-// {
-//     id:1,
-//     product:"Juicy Chicken Burger",
-//     Image:"https://i.postimg.cc/CMng0LWn/17-Food-Word-Origin-Stories-That-Will-Make-You-Hungry.jpg",
-//     price:"21",
-//     category:"meal"
-// },
-// {
-//     id:2,
-//     product:"Crispy Chicken Tacos",
-//     Image:"https://i.postimg.cc/gjjJ4qnS/Crispy-Chicken-Carnitas-Tacos-with-Avocado-Cilantro-Lime-Sauce.jpg",
-//     price:"21",
-//     category:"meal"
-// },
-// {
-//     id:3,
-//     product:"Hot dog",const meals = [
 {
     id:1,
     product:"Juicy Chicken Burger",
@@ -273,12 +256,18 @@ const special = [
     },
     
 ]
+
 // DOM for display
 let specials_display = document.querySelector('.specials');
-let meal_display = document.querySelector('#meals') 
-let drink_display = document.querySelector('#drinks') 
-let desert_display= document.querySelector('#deserts') 
-let starter_display = document.querySelector('#starters') 
+
+
+
+//DOM CLICKED
+let meal_display = document.querySelector('#meals')
+let drink_display = document.querySelector('#drinks')
+let desert_display = document.querySelector('#deserts')
+let starter_display = document.querySelector('#starters')
+
 //---- DISPLAYs------
 // specials
 special.forEach(special => {
@@ -303,8 +292,9 @@ special.forEach(special => {
              impedit placeat ipsum, architecto ipsam iusto praesentium eaque
         </p>
         <div class="cart-button">
-        <button class="cart-button" onclick="add_to_cart(special)">
+        <button class="cart-button" onclick="add_to_cart(starters)">
             <i class="bi bi-bag"></i>
+            </button>
         </div>
     </div>
 </div>
@@ -433,7 +423,7 @@ let cart_target = document.querySelector('.count')
 // Event listeners
 let cart_button = document.querySelectorAll('.cart-button')
 
-// cart-button.addEventListener("click",add_to_cart)
+ 
 
 function add_to_cart(starters) {
     cart.push({
@@ -509,13 +499,13 @@ function add_to_cart(deserts) {
     cart_count();
 }
 
-function add_to_cart(special) {
+function add_to_cart(starters) {
     cart.push({
-        id: deserts.id,
-        product: deserts.product,
-        Image: deserts.Image,
-        price: deserts.price,
-        category: deserts.category
+        id: starters.id,
+        product: starters.product,
+        Image: starters.Image,
+        price: starters.price,
+        category: starters.category
     });
     function cart_count() {
         let cart_length = cart.length;
@@ -526,8 +516,3 @@ function add_to_cart(special) {
 
     cart_count();
 }
-
-
-
-
- 
